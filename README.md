@@ -1,2 +1,2 @@
-# ISMIP06
-Compliance Checker of ISMIP06 files and directories
+# ISMIP6
+ISMIP6 files Compliance Checker.

@@ -1,0 +1,3756 @@
+************************************************************************************
+*************     Ice Sheet Model Simulations - Compliance Checker     *************
+************************************************************************************
+version: 0 
+verification criteria: ismip6_criteria_v0.csv 
+date: 2022/07/13
+source: https://github.com/jbbarre/ISM_SimulationChecker 
+ 
+ 
+------------------------------------------------------------------------------------
+Verified directory: /mnt/d/1_protect/0_sanity_check/IMAU/IMAUICE1 
+------------------------------------------------------------------------------------
+ 
+14 experiments checked.
+262 files checked (Scalar files are ignored).
+ 
+ 
+101 error(s) detected.
+  - Naming Tests   : 35 error(s)
+  - Numerical Tests: 51 error(s)
+  - Spatial Tests  : 0 error(s)
+  - Time Tests     : 15 error(s)
+
+0 warning(s) detected.
+ 
+  -  Compliance check ignored : experiment asmbnot in the experiment lists.
+  -  Compliance check ignored : experiment ctrl_proj_stdnot in the experiment lists.
+  -   - Compliance check ignored: file AIS_IMAU_IMAUICE1_exp05.ncdo not follow the naming convention.
+  -   - Compliance check ignored: file AIS_IMAU_IMAUICE1_exp06.ncdo not follow the naming convention.
+  -   - Compliance check ignored: file AIS_IMAU_IMAUICE1_exp07.ncdo not follow the naming convention.
+  -   - Compliance check ignored: file AIS_IMAU_IMAUICE1_exp08.ncdo not follow the naming convention.
+  -   - Compliance check ignored: file AIS_IMAU_IMAUICE1_exp09.ncdo not follow the naming convention.
+  -   - Compliance check ignored: file AIS_IMAU_IMAUICE1_exp10.ncdo not follow the naming convention.
+  -   - Compliance check ignored: file AIS_IMAU_IMAUICE1_exp11.ncdo not follow the naming convention.
+  -   - Compliance check ignored: file AIS_IMAU_IMAUICE1_exp12.ncdo not follow the naming convention.
+====================================================================================
+================                 DETAILED RESULTS                   ================
+====================================================================================
+Tips: Use Cltr+F to look for specific problems. 
+ 
+
+ -----------------------------------------
+ Experiment: abmb 
+ -----------------------------------------
+ 
+ ERROR: The compliance check is ignored for experiment abmb as it is not in [hist, ctrl, ctrl_proj, exp01, exp02, exp03, exp04, exp05, exp06, exp07, exp08, exp09, exp10, exp11, exp12, exp13]. 
+
+ -----------------------------------------
+ Experiment: asmb 
+ -----------------------------------------
+ 
+ ERROR: The compliance check is ignored for experiment asmb as it is not in [hist, ctrl, ctrl_proj, exp01, exp02, exp03, exp04, exp05, exp06, exp07, exp08, exp09, exp10, exp11, exp12, exp13]. 
+
+ -----------------------------------------
+ Experiment: ctrl 
+ -----------------------------------------
+ 
+ Mandatory variables Test: ctrl_32 : all mandatory variables exist. 
+ 
+Experiment: ctrl - File: acabf_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1979-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - acabf_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: base_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1980-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - base_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: dlithkdt_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-4.1219286117666343e-07) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(1.1342497145960806e-06) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1979-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - dlithkdt_AIS_IMAU_IMAUICE1_ctrl.nc
+4 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: libmassbffl_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1979-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - libmassbffl_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: libmassbfgr_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1979-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - libmassbfgr_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: licalvf_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1979-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - licalvf_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: ligroundf_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1979-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - ligroundf_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: lithk_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1980-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - lithk_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: orog_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1980-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - orog_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: sftflf_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1980-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - sftflf_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: sftgif_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1980-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - sftgif_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: sftgrf_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1980-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - sftgrf_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: topg_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1980-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - topg_AIS_IMAU_IMAUICE1_ctrl.nc
+2 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: xvelmean_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1980-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - xvelmean_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: ctrl - File: yvelmean_AIS_IMAU_IMAUICE1_ctrl.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 1980-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - ERROR: the experiment lasts 121 years. The duration should be 120 years
+ - Time step: 365 days
+
+******************************************************
+ctrl - yvelmean_AIS_IMAU_IMAUICE1_ctrl.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: ctrl_proj_std 
+ -----------------------------------------
+ 
+ ERROR: The compliance check is ignored for experiment ctrl_proj_std as it is not in [hist, ctrl, ctrl_proj, exp01, exp02, exp03, exp04, exp05, exp06, exp07, exp08, exp09, exp10, exp11, exp12, exp13]. 
+
+ -----------------------------------------
+ Experiment: exp05 
+ -----------------------------------------
+ 
+ Mandatory variables Test: exp05_32 : all mandatory variables exist. 
+ 
+Experiment: exp05 - File: acabf_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - acabf_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ - ERROR: the file nameAIS_IMAU_IMAUICE1_exp05.nc do not follow the naming convention.
+ 
+Experiment: exp05 - File: base_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - base_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: dlithkdt_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-1.4038386325410102e-05) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(2.842736876118579e-06) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - dlithkdt_AIS_IMAU_IMAUICE1_exp05.nc
+3 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - libmassbffl_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: libmassbfgr_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - ERROR: The maximum value(1.2088463336112909e-05) is out of range.Max value accepted :0.0
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - libmassbfgr_AIS_IMAU_IMAUICE1_exp05.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: licalvf_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - licalvf_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: ligroundf_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - ligroundf_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: lithk_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - lithk_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: orog_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - orog_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: sftflf_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - sftflf_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: sftgif_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - sftgif_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: sftgrf_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - sftgrf_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: topg_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - topg_AIS_IMAU_IMAUICE1_exp05.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: xvelmean_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - xvelmean_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp05 - File: yvelmean_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp05 - yvelmean_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: exp06 
+ -----------------------------------------
+ 
+ Mandatory variables Test: exp06_32 : all mandatory variables exist. 
+ 
+Experiment: exp06 - File: acabf_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - acabf_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ - ERROR: the file nameAIS_IMAU_IMAUICE1_exp06.nc do not follow the naming convention.
+ 
+Experiment: exp06 - File: base_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - base_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: dlithkdt_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-1.6481191778439097e-05) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(1.2421353858371731e-05) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - dlithkdt_AIS_IMAU_IMAUICE1_exp06.nc
+3 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - libmassbffl_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: libmassbfgr_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - ERROR: The maximum value(1.089151919586584e-05) is out of range.Max value accepted :0.0
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - libmassbfgr_AIS_IMAU_IMAUICE1_exp06.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: licalvf_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - licalvf_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: ligroundf_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - ligroundf_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: lithk_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - lithk_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: orog_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - orog_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: sftflf_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - sftflf_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: sftgif_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - sftgif_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: sftgrf_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - sftgrf_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: topg_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - topg_AIS_IMAU_IMAUICE1_exp06.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: xvelmean_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - xvelmean_AIS_IMAU_IMAUICE1_exp06.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp06 - File: yvelmean_AIS_IMAU_IMAUICE1_exp06.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - ERROR: The minimum value(-0.0003558936296030879) is out of range. Min value accepted :-0.000317
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp06 - yvelmean_AIS_IMAU_IMAUICE1_exp06.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: exp07 
+ -----------------------------------------
+ 
+ Mandatory variables Test: exp07_32 : all mandatory variables exist. 
+ 
+Experiment: exp07 - File: acabf_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - acabf_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ - ERROR: the file nameAIS_IMAU_IMAUICE1_exp07.nc do not follow the naming convention.
+ 
+Experiment: exp07 - File: base_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - base_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: dlithkdt_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-3.9931393303049845e-07) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(1.0857944516828866e-06) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - dlithkdt_AIS_IMAU_IMAUICE1_exp07.nc
+3 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - libmassbffl_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: libmassbfgr_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - ERROR: The maximum value(9.06204786588205e-06) is out of range.Max value accepted :0.0
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - libmassbfgr_AIS_IMAU_IMAUICE1_exp07.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: licalvf_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - licalvf_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: ligroundf_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - ligroundf_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: lithk_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - lithk_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: orog_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - orog_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: sftflf_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - sftflf_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: sftgif_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - sftgif_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: sftgrf_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - sftgrf_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: topg_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - topg_AIS_IMAU_IMAUICE1_exp07.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: xvelmean_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - xvelmean_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp07 - File: yvelmean_AIS_IMAU_IMAUICE1_exp07.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp07 - yvelmean_AIS_IMAU_IMAUICE1_exp07.nc
+No errors. Good job !
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: exp08 
+ -----------------------------------------
+ 
+ Mandatory variables Test: exp08_32 : all mandatory variables exist. 
+ 
+Experiment: exp08 - File: acabf_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - acabf_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ - ERROR: the file nameAIS_IMAU_IMAUICE1_exp08.nc do not follow the naming convention.
+ 
+Experiment: exp08 - File: base_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - base_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: dlithkdt_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-1.3898716133553535e-05) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(2.8810113690269645e-06) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - dlithkdt_AIS_IMAU_IMAUICE1_exp08.nc
+3 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - libmassbffl_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: libmassbfgr_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - ERROR: The maximum value(5.046128990215948e-06) is out of range.Max value accepted :0.0
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - libmassbfgr_AIS_IMAU_IMAUICE1_exp08.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: licalvf_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - licalvf_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: ligroundf_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - ligroundf_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: lithk_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - lithk_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: orog_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - orog_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: sftflf_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - sftflf_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: sftgif_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - sftgif_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: sftgrf_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - sftgrf_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: topg_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - topg_AIS_IMAU_IMAUICE1_exp08.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: xvelmean_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - xvelmean_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp08 - File: yvelmean_AIS_IMAU_IMAUICE1_exp08.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp08 - yvelmean_AIS_IMAU_IMAUICE1_exp08.nc
+No errors. Good job !
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: exp09 
+ -----------------------------------------
+ 
+ Mandatory variables Test: exp09_32 : all mandatory variables exist. 
+ 
+Experiment: exp09 - File: acabf_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - acabf_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ - ERROR: the file nameAIS_IMAU_IMAUICE1_exp09.nc do not follow the naming convention.
+ 
+Experiment: exp09 - File: base_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - base_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: dlithkdt_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-1.0029811164713465e-05) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(1.5490343230339931e-06) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - dlithkdt_AIS_IMAU_IMAUICE1_exp09.nc
+3 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - libmassbffl_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: libmassbfgr_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - ERROR: The maximum value(7.8528528320021e-06) is out of range.Max value accepted :0.0
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - libmassbfgr_AIS_IMAU_IMAUICE1_exp09.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: licalvf_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - licalvf_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: ligroundf_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - ligroundf_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: lithk_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - lithk_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: orog_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - orog_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: sftflf_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - sftflf_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: sftgif_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - sftgif_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: sftgrf_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - sftgrf_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: topg_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - topg_AIS_IMAU_IMAUICE1_exp09.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: xvelmean_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - xvelmean_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp09 - File: yvelmean_AIS_IMAU_IMAUICE1_exp09.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp09 - yvelmean_AIS_IMAU_IMAUICE1_exp09.nc
+No errors. Good job !
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: exp10 
+ -----------------------------------------
+ 
+ Mandatory variables Test: exp10_32 : all mandatory variables exist. 
+ 
+Experiment: exp10 - File: acabf_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - acabf_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ - ERROR: the file nameAIS_IMAU_IMAUICE1_exp10.nc do not follow the naming convention.
+ 
+Experiment: exp10 - File: base_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - base_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: dlithkdt_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-9.932105967891403e-06) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(1.5726814126537647e-06) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - dlithkdt_AIS_IMAU_IMAUICE1_exp10.nc
+3 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - libmassbffl_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: libmassbfgr_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - ERROR: The maximum value(5.037264145357767e-06) is out of range.Max value accepted :0.0
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - libmassbfgr_AIS_IMAU_IMAUICE1_exp10.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: licalvf_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - licalvf_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: ligroundf_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - ligroundf_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: lithk_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - lithk_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: orog_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - orog_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: sftflf_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - sftflf_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: sftgif_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - sftgif_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: sftgrf_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - sftgrf_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: topg_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - topg_AIS_IMAU_IMAUICE1_exp10.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: xvelmean_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - xvelmean_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp10 - File: yvelmean_AIS_IMAU_IMAUICE1_exp10.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp10 - yvelmean_AIS_IMAU_IMAUICE1_exp10.nc
+No errors. Good job !
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: exp11 
+ -----------------------------------------
+ 
+ Mandatory variables Test: exp11_32 : all mandatory variables exist. 
+ 
+Experiment: exp11 - File: acabf_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - acabf_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ - ERROR: the file nameAIS_IMAU_IMAUICE1_exp11.nc do not follow the naming convention.
+ 
+Experiment: exp11 - File: base_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - base_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: dlithkdt_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-2.7193831556360237e-05) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(8.512468411936425e-06) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - dlithkdt_AIS_IMAU_IMAUICE1_exp11.nc
+3 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - libmassbffl_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: libmassbfgr_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - ERROR: The maximum value(3.891056257998571e-05) is out of range.Max value accepted :0.0
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - libmassbfgr_AIS_IMAU_IMAUICE1_exp11.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: licalvf_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - licalvf_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: ligroundf_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - ligroundf_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: lithk_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - lithk_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: orog_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - orog_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: sftflf_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - sftflf_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: sftgif_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - sftgif_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: sftgrf_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - sftgrf_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: topg_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - topg_AIS_IMAU_IMAUICE1_exp11.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: xvelmean_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - xvelmean_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp11 - File: yvelmean_AIS_IMAU_IMAUICE1_exp11.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp11 - yvelmean_AIS_IMAU_IMAUICE1_exp11.nc
+No errors. Good job !
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: exp12 
+ -----------------------------------------
+ 
+ Mandatory variables Test: exp12_32 : all mandatory variables exist. 
+ 
+Experiment: exp12 - File: acabf_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - acabf_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ - ERROR: the file nameAIS_IMAU_IMAUICE1_exp12.nc do not follow the naming convention.
+ 
+Experiment: exp12 - File: base_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - base_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: dlithkdt_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-2.863385816453956e-05) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(1.9671949758048868e-06) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - dlithkdt_AIS_IMAU_IMAUICE1_exp12.nc
+3 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - libmassbffl_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: libmassbfgr_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - ERROR: The maximum value(3.8920337829040363e-05) is out of range.Max value accepted :0.0
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - libmassbfgr_AIS_IMAU_IMAUICE1_exp12.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: licalvf_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - licalvf_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: ligroundf_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - ligroundf_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: lithk_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - lithk_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: orog_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - orog_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: sftflf_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - sftflf_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: sftgif_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - sftgif_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: sftgrf_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - sftgrf_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: topg_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - topg_AIS_IMAU_IMAUICE1_exp12.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: xvelmean_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - xvelmean_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp12 - File: yvelmean_AIS_IMAU_IMAUICE1_exp12.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp12 - yvelmean_AIS_IMAU_IMAUICE1_exp12.nc
+No errors. Good job !
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: exp13 
+ -----------------------------------------
+ 
+ Mandatory variables Test: exp13_32 : all mandatory variables exist. 
+ 
+Experiment: exp13 - File: acabf_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: acabf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - acabf_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ - ERROR: the file nameAIS_IMAU_IMAUICE1_exp13.nc do not follow the naming convention.
+ 
+Experiment: exp13 - File: base_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: base
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - base_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: dlithkdt_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: dlithkdt
+ 
+NUMERICAL Tests 
+ - ERROR: The unit of the variable is kg m-2 s-1 and should be m s-1 
+ - ERROR: The minimum value(-1.5696414266130887e-05) is out of range. Min value accepted :-5.5e-08
+ - ERROR: The maximum value(9.432785191165749e-06) is out of range.Max value accepted :5.5e-08
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - dlithkdt_AIS_IMAU_IMAUICE1_exp13.nc
+3 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - libmassbffl_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: libmassbfgr_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: libmassbfgr
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - ERROR: The maximum value(1.8420791093376465e-05) is out of range.Max value accepted :0.0
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - libmassbfgr_AIS_IMAU_IMAUICE1_exp13.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: licalvf_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: licalvf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - licalvf_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: ligroundf_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: ligroundf
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - ligroundf_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: lithk_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: lithk
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - lithk_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: orog_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: orog
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - orog_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: sftflf_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: sftflf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - sftflf_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: sftgif_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: sftgif
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - sftgif_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: sftgrf_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: sftgrf
+ 
+NUMERICAL Tests 
+ - The unit is correct: unitless
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - sftgrf_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: topg_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: topg
+ 
+NUMERICAL Tests 
+ - The unit is correct: m
+ - ERROR: The minimum value(-6272.806640625) is out of range. Min value accepted :-3000.0
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - topg_AIS_IMAU_IMAUICE1_exp13.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: xvelmean_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: xvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - xvelmean_AIS_IMAU_IMAUICE1_exp13.nc
+No errors. Good job !
+No warnings.
+******************************************************
+ 
+Experiment: exp13 - File: yvelmean_AIS_IMAU_IMAUICE1_exp13.nc
+ 
+** Tested Variable: yvelmean
+ 
+NUMERICAL Tests 
+ - The unit is correct: m s-1
+ - ERROR: The minimum value(-0.0003480738669168204) is out of range. Min value accepted :-0.000317
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2016-01-01.
+ - Experiment ends correctly on 2101-01-01.
+ - Experiment lasts 85 years.
+ - Time step: 365 days
+
+******************************************************
+exp13 - yvelmean_AIS_IMAU_IMAUICE1_exp13.nc
+1 error(s). Please review before sharing.
+No warnings.
+******************************************************
+
+ -----------------------------------------
+ Experiment: hist 
+ -----------------------------------------
+ 
+ Mandatory variables Test: hist_32 : all mandatory variables exist. 
+ - ERROR: the file nameacabf_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namebase_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namedlithkdt_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nameiareafl_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nameiareagr_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namelibmassbffl_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namelibmassbfgr_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namelicalvf_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nameligroundf_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namelimnsw_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namelim_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namelithk_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nameorog_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namesftflf_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namesftgif_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namesftgrf_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nametendacabf_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nametendlibmassbf_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nametendlicalvf_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nametendligroundf_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nametopg_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file namexvelmean_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.
+ - ERROR: the file nameyvelmean_AIS_IMAU_IMAUICE1_hist_std.nc do not follow the naming convention.

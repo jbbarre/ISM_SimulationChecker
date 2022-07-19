@@ -12,10 +12,11 @@ from tqdm import tqdm
 #######################################
 # Compliance values to be monitored
 #######################################
+workdir = os.getcwd()
 
 try:
     # load csv :
-    ismip  = pd.read_csv('/mnt/d/1_protect/0_sanity_check/ISMIP6/ismip6_criteria_v0.csv',delimiter=';',decimal=",")
+    ismip  = pd.read_csv(workdir + 'ismip6_criteria_v0.csv',delimiter=';',decimal=",")
 except IOError:
     print('ERROR: Unable to open the compliance criteria file (.csv required with ; as delimiter and , for decimal.)')
 else:

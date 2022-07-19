@@ -1,2 +1,3 @@
-# ISMIP6
-ISMIP6 files Compliance Checker.
+# Ice Sheet Simulation compliance checker.
+
+

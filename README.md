@@ -9,7 +9,7 @@ The script checks the compliance of a simulation dataset according criteria, whi
 
 The compliance criteria of output variables are defined in a separate csv file. The compliance criteria of experiments are directly defined as a dictionnary in the python file.
 
-=> For ISMIP6 simulations, the criteria are following the conventions defined in the [ISMIP6 wiki](https://www.climate-cryosphere.org/wiki/index.php?title=ISMIP6-Projections-Antarctica#Appendix_1_.E2.80.93_Output_grid_definition_and_interpolation).
+=> For ISMIP6 simulations, the criteria are following the conventions defined in the [ISMIP6 wiki](https://www.climate-cryosphere.org/wiki/index.php?title=ISMIP6-Projections-Antarctica#Appendix_1_.E2.80.93_Output_grid_definition_and_interpolation). The associated csv file is [ismip6_criteria_v0.csv](https://github.com/jbbarre/ISM_SimulationChecker/blob/main/ismip6_criteria_v0.csv)
 
 *************************************************
 
@@ -25,7 +25,7 @@ The code has been developed with python 3.9 and the following modules:
 * datetime
 * tqdm
   
-Conda users can install the **isscheck** environnment with the YML file *isschecker_env.yml*.
+=> Conda users can install the **isscheck** environnment with the YML file [isschecker_env.yml](https://github.com/jbbarre/ISM_SimulationChecker/blob/main/isschecker_env.yml).
 
 *************************************************
 

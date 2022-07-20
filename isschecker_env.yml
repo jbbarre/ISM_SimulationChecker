@@ -4,16 +4,14 @@ channels:
   - defaults 
 dependencies: 
   - python=3.9 
-  - pip 
-
-
+  - pip=22.1.2
 
 # Core scientific python 
-  - numpy 
-  - tqdm 
-  - pandas 
-  - dask
+  - numpy=1.23.0
+  - pandas=1.4.3
+  - tqdm=4.64.0
+
 
 # Spatial packages 
-  - xarray 
-  - cftime
+  - xarray=2022.3.0
+  - cftime=1.5.1.1

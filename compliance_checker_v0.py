@@ -18,7 +18,7 @@ try:
     # load csv :
     ismip  = pd.read_csv(workdir + 'ismip6_criteria_v0.csv',delimiter=';',decimal=",")
 except IOError:
-    print('ERROR: Unable to open the compliance criteria file (.csv required with ; as delimiter and , for decimal.)')
+    print('ERROR: Unable to open the compliance criteria file (.csv required with ; as delimiter and , for decimal.). Is the path to the file correct ? '+ workdir + 'ismip6_criteria_v0.csv')
 else:
     ismip_meta = ismip.to_dict('records')
     # get the list of variables
@@ -363,7 +363,7 @@ with open(os.path.join(source_path,'compliance_checker_log.txt'),"w") as f:
                                                     var_time_errors += 1
                                     else:
                                         # NAMING TEST
-                                        f.write('- ERROR: Region ' + region + 'not recognized. It should be AIS or GIS. The compliance check has been interrupted for this variable.\n')
+                                        f.write('- ERROR: Region ' + region + ' not recognized. It should be AIS or GIS. The compliance check has been interrupted for this variable.\n')
                                         report_naming_issues.append('Compliance check ignored: region (AIS/GIS) not identified in the file ' + file_name + ' due to wrong naming.')
                                         var_naming_errors += 1
                                 else:

@@ -1,0 +1,60 @@
+************************************************************************************
+*************     Ice Sheet Model Simulations - Compliance Checker     *************
+************************************************************************************
+version: 0 
+verification criteria: ismip6_criteria_v0.csv 
+date: 2022/08/02
+source: https://github.com/jbbarre/ISM_SimulationChecker 
+ 
+------------------------------------------------------------------------------------
+Verified directory: ./test 
+------------------------------------------------------------------------------------
+1 experiments checked.
+1 files checked (Scalar files are ignored).
+ 
+0 error(s) detected.
+  - Naming Tests   : 0 error(s)
+  - Numerical Tests: 0 error(s)
+  - Spatial Tests  : 0 error(s)
+  - Time Tests     : 0 error(s)
+ 
+0 warning(s) detected.
+ 
+Naming tests errors report: 
+
+ 
+====================================================================================
+================                DETAILED RESULTS                    ================
+====================================================================================
+Tips: Use Cltr+F to look for specific problems. 
+ 
+
+ -----------------------------------------
+ Experiment: exp05 
+ -----------------------------------------
+ 
+ ERROR: In experiment exp05_32, these mandatory variable(s) is (are) missing: ['acabf', 'base', 'libmassbfgr', 'lithk', 'orog', 'sftflf', 'sftgif', 'sftgrf', 'strbasemag', 'topg', 'xvelmean', 'yvelmean']
+ 
+Experiment: exp05 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp05.nc
+ 
+** Tested Variable: libmassbffl
+ 
+NUMERICAL Tests 
+ - The unit is correct: kg m-2 s-1
+ - The minimum value successfully verified.
+ - The maximum value successfully verified.
+SPATIAL Tests 
+ - Grid: Lowest left corner is well defined.
+ - Grid: Upper right corner is well defined.
+ - The grid resolution (32.0) was successfully verified.
+TIME Tests 
+ - Experiment starts correctly on 2015-07-01.
+ - Experiment ends correctly on 2100-07-01.
+ - Experiment lasts 85 years.
+ - Time step: 365.0 days
+
+******************************************************
+exp05 - libmassbffl_AIS_IMAU_IMAUICE1_exp05.nc
+No errors. Good job !
+No warnings.
+******************************************************

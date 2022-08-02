@@ -10,13 +10,19 @@ import cftime
 from tqdm import tqdm
 
 #######################################
+#### specify your source path
+#######################################
+source_path = './test'
+
+
+#######################################
 # Compliance values to be monitored
 #######################################
 workdir = os.getcwd()
 
 try:
     # load csv :
-    ismip  = pd.read_csv(workdir + 'ismip6_criteria_v0.csv',delimiter=';',decimal=",")
+    ismip  = pd.read_csv(workdir + '/ismip6_criteria_v0.csv',delimiter=';',decimal=",")
 except IOError:
     print('ERROR: Unable to open the compliance criteria file (.csv required with ; as delimiter and , for decimal.). Is the path to the file correct ? '+ workdir + 'ismip6_criteria_v0.csv')
 else:
@@ -61,14 +67,6 @@ def files_and_subdirectories(path):
         elif os.path.isdir(os.path.join(path, f)):
             directories.append(f)
     return directories, files
-
-#################################
-#### specify your source path
-#################################
-source_path = '/mnt/d/1_protect/0_sanity_check/LSCE/GRISLI1'
-#source_path = '/mnt/d/1_protect/0_sanity_check/VUW/PISM'
-
-
 
 
 with open(os.path.join(source_path,'compliance_checker_log.txt'),"w") as f:

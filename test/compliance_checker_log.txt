@@ -3,7 +3,7 @@
 ************************************************************************************
 version: 0 
 verification criteria: ismip6_criteria_v0.csv 
-date: 2022/08/02
+date: 2022/08/03
 source: https://github.com/jbbarre/ISM_SimulationChecker 
  
 ------------------------------------------------------------------------------------
@@ -12,16 +12,15 @@ Verified directory: ./test
 1 experiments checked.
 1 files checked (Scalar files are ignored).
  
-0 error(s) detected.
-  - Naming Tests   : 0 error(s)
-  - Numerical Tests: 0 error(s)
-  - Spatial Tests  : 0 error(s)
-  - Time Tests     : 0 error(s)
+12 error(s) detected.
+  - Mandatory variables: 12 error(s)
+  - Naming Tests       : 0 error(s)
+  - Numerical Tests    : 0 error(s)
+  - Spatial Tests      : 0 error(s)
+  - Time Tests         : 0 error(s)
  
 0 warning(s) detected.
  
-Naming tests errors report: 
-
  
 ====================================================================================
 ================                DETAILED RESULTS                    ================
@@ -29,10 +28,10 @@ Naming tests errors report:
 Tips: Use Cltr+F to look for specific problems. 
  
 
- -----------------------------------------
- Experiment: exp05 
- -----------------------------------------
- 
+ **********************************************************
+Experiment: exp05 
+ **********************************************************
+
  ERROR: In experiment exp05_32, these mandatory variable(s) is (are) missing: ['acabf', 'base', 'libmassbfgr', 'lithk', 'orog', 'sftflf', 'sftgif', 'sftgrf', 'strbasemag', 'topg', 'xvelmean', 'yvelmean']
  
 Experiment: exp05 - File: libmassbffl_AIS_IMAU_IMAUICE1_exp05.nc
@@ -53,8 +52,8 @@ TIME Tests
  - Experiment lasts 85 years.
  - Time step: 365.0 days
 
-******************************************************
-exp05 - libmassbffl_AIS_IMAU_IMAUICE1_exp05.nc
+----------------------------------------------------------
+exp05 - libmassbffl - File:libmassbffl_AIS_IMAU_IMAUICE1_exp05.nc
 No errors. Good job !
 No warnings.
-******************************************************
+----------------------------------------------------------

@@ -12,12 +12,7 @@ from tqdm import tqdm
 #######################################
 #### specify your source path
 #######################################
-#source_path = './test'
-#source_path = '/mnt/d/1_protect/0_sanity_check/ULB/fETISh_32' #Typerror
-#source_path = '/mnt/d/1_protect/0_sanity_check/IMAU/IMAUICEtest'
-#source_path ='/mnt/d/1_protect/0_sanity_check/DOE/MALI' # says since ... instead of Days Since...
-#source_path = '/mnt/d/1_protect/0_sanity_check/ILTSPIK/SICOPOLIS' #ras
-source_path = '/mnt/d/1_protect/0_sanity_check/AWI/PISM1'
+source_path = './test'
 
 #######################################
 # Compliance values to be monitored

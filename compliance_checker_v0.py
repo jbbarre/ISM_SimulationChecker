@@ -166,9 +166,10 @@ try:
                 temp_mandatory_var = mandatory_variables
                 if  variable in mandatory_variables:
                     temp_mandatory_var.remove(variable)
-            
-            experiment_name = xp[:-3]
-            grid_resolution = int(xp[-2:])
+            #get the experiment name (example: exp05)
+            experiment_name = xp.split('_')[0]
+            #get the resolution as integer
+            grid_resolution = int(xp.split('_')[1])
             
             if experiment_name  in [dic['experiment'] for dic in experiments]:
                 f.write('\n ')
@@ -369,13 +370,13 @@ try:
                                                                 f.write(' - ERROR: the experiment lasts ' + str(duration_years) + ' years. The duration should be ' + str(experiments[index_exp]['duration']) + ' years\n')
                                                                 var_time_errors += 1
                                                             # test Time step
-                                                            if isinstance((ds['time'].values[11]-ds['time'].values[10]),datetime.timedelta):
-                                                                time_step = (ds['time'].values[11]-ds['time'].values[10]).days
+                                                            if isinstance((ds['time'].values[1]-ds['time'].values[0]),datetime.timedelta):
+                                                                time_step = (ds['time'].values[1]-ds['time'].values[0]).days
                                                             else:   
-                                                                if isinstance((ds['time'].values[11]-ds['time'].values[10]),np.timedelta64):
-                                                                    time_step = np.timedelta64(ds['time'].values[11]-ds['time'].values[10], 'D')/ np.timedelta64(1, 'D')
+                                                                if isinstance((ds['time'].values[1]-ds['time'].values[0]),np.timedelta64):
+                                                                    time_step = np.timedelta64(ds['time'].values[1]-ds['time'].values[0], 'D')/ np.timedelta64(1, 'D')
                                                                 else:    
-                                                                    time_step = ds['time'].values[11]-ds['time'].values[10]
+                                                                    time_step = ds['time'].values[1]-ds['time'].values[10]
 
                                                             if 360<=time_step<=367:
                                                                 f.write(' - Time step: ' + str(time_step) + ' days' + '\n')

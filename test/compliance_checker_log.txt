@@ -3,7 +3,7 @@
 ************************************************************************************
 version: 0 
 verification criteria: ismip6_criteria_v0.csv 
-date: 2022/08/03
+date: 2022/08/05
 source: https://github.com/jbbarre/ISM_SimulationChecker 
  
 ------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ Tips: Use Cltr+F to look for specific problems.
  
 
  **********************************************************
-Experiment: exp05 
+** Experiment: exp05 
  **********************************************************
 
  ERROR: In experiment exp05_32, these mandatory variable(s) is (are) missing: ['acabf', 'base', 'libmassbfgr', 'lithk', 'orog', 'sftflf', 'sftgif', 'sftgrf', 'strbasemag', 'topg', 'xvelmean', 'yvelmean']
@@ -50,7 +50,7 @@ TIME Tests
  - Experiment starts correctly on 2015-07-01.
  - Experiment ends correctly on 2100-07-01.
  - Experiment lasts 85 years.
- - Time step: 365.0 days
+ - Time step: 366.0 days
 
 ----------------------------------------------------------
 exp05 - libmassbffl - File:libmassbffl_AIS_IMAU_IMAUICE1_exp05.nc

@@ -9,6 +9,9 @@ import cftime
 # progress bar
 from tqdm import tqdm
 
+###  Version :
+version = '0.1' #05.08.2022 (Major version).(Minor version)
+
 #######################################
 #### specify your source path
 #######################################
@@ -21,7 +24,7 @@ workdir = os.getcwd()
 
 try:
     # load csv :
-    ismip  = pd.read_csv(workdir + '/ismip6_criteria_v0.csv',delimiter=';',decimal=",")
+    ismip  = pd.read_csv(workdir + '/ismip6_criteria.csv',delimiter=';',decimal=",")
 except IOError:
     print('ERROR: Unable to open the compliance criteria file (.csv required with ; as delimiter and , for decimal.). Is the path to the file correct ? '+ workdir + 'ismip6_criteria_v0.csv')
 else:
@@ -68,6 +71,11 @@ def files_and_subdirectories(path):
             directories.append(f)
     return directories, files
 
+# check motonocity of a list (used to check time serie) 
+
+def strictly_increasing(L):
+    return all(x<y for x, y in zip(L, L[1:]))
+
 ###############################################
 # create the compliance_checker_log.txt file
 ###############################################
@@ -84,7 +92,7 @@ try:
         f.write('************************************************************************************\n')
         f.write('*************     Ice Sheet Model Simulations - Compliance Checker     *************\n')
         f.write('************************************************************************************\n')
-        f.write('version: 0 \n')
+        f.write(f'version: {version} \n')
         f.write('verification criteria: ismip6_criteria_v0.csv \n')
         f.write('date: '+ today.strftime("%Y/%m/%d") +'\n')
         f.write('source: https://github.com/jbbarre/ISM_SimulationChecker \n')
@@ -128,7 +136,6 @@ try:
         file_counter = 0
         #initialize  files checked counter
         exp_counter = 0
-
         for xp in experiment_directories:
 
             exp_counter += 1
@@ -166,15 +173,17 @@ try:
                 temp_mandatory_var = mandatory_variables
                 if  variable in mandatory_variables:
                     temp_mandatory_var.remove(variable)
+            #split the experiment directory name
+            experiment_chain = xp.split('_')
             #get the experiment name (example: exp05)
-            experiment_name = xp.split('_')[0]
+            experiment_name = '_'.join(experiment_chain[:-1])
             #get the resolution as integer
-            grid_resolution = int(xp.split('_')[1])
+            grid_resolution = int(experiment_chain[-1])
             
             if experiment_name  in [dic['experiment'] for dic in experiments]:
                 f.write('\n ')
                 f.write('**********************************************************\n')
-                f.write('** Experiment: ' + experiment_name + ' \n ')
+                f.write(' ** Experiment: ' + experiment_name + ' \n ')
                 f.write('**********************************************************\n')
                 f.write('\n ')
                 if not temp_mandatory_var:
@@ -342,47 +351,59 @@ try:
                                                     f.write('TIME Tests \n')
                                                     #check if time dimension is not missing
                                                     if set(['t']).issubset(dim) or set(['time']).issubset(dim):
+                                                        iteration = len(ds.coords['time'])
                                                         start_exp = pd.to_datetime(min(ds['time']).values.astype("datetime64[ns]"))
                                                         end_exp  = pd.to_datetime(max(ds['time']).values.astype("datetime64[ns]"))
                                                         avgyear = 365.2425        # pedants definition of a year length with leap years
-                                                        duration_days = (end_exp - start_exp)
-                                                        duration_years = round(pd.to_numeric(duration_days.days / avgyear))
-
+                                                        
                                                         index_exp=[dic['experiment'] for dic in experiments].index(experiment_name)
                                                         #test if start_exp and end_exp are datetime format
                                                         if isinstance(start_exp, datetime.datetime) & isinstance(end_exp, datetime.datetime):
-                                                            # test Starting date
-                                                            if experiments[index_exp]['startinf'] <= start_exp <= experiments[index_exp]['startsup']:
-                                                                f.write(' - Experiment starts correctly on ' + start_exp.strftime('%Y-%m-%d') + '.\n')
-                                                            else:
-                                                                f.write(' - ERROR: the experiment starts the ' + start_exp.strftime('%Y-%m-%d') + '. The date should be comprised between ' + experiments[index_exp]['startinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['startsup'].strftime('%Y-%m-%d')+'\n')
-                                                                var_time_errors += 1
-                                                            # test Ending date
-                                                            if experiments[index_exp]['endinf'] <= end_exp <= experiments[index_exp]['endsup']:
-                                                                f.write(' - Experiment ends correctly on ' + end_exp.strftime('%Y-%m-%d') + '.\n')
-                                                            else:
-                                                                f.write(' - ERROR: the experiment ends on ' + end_exp.strftime('%Y-%m-%d') + '. The date should be comprised between ' + experiments[index_exp]['endinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['endsup'].strftime('%Y-%m-%d')+'\n')
-                                                                var_time_errors += 1
-                                                            # test Duration
-                                                            if experiments[index_exp]['duration']-1 <= duration_years <= experiments[index_exp]['duration']:
-                                                                f.write(" - Experiment lasts " + str(duration_years) + ' years.\n')
-                                                            else:
-                                                                f.write(' - ERROR: the experiment lasts ' + str(duration_years) + ' years. The duration should be ' + str(experiments[index_exp]['duration']) + ' years\n')
-                                                                var_time_errors += 1
-                                                            # test Time step
-                                                            if isinstance((ds['time'].values[1]-ds['time'].values[0]),datetime.timedelta):
-                                                                time_step = (ds['time'].values[1]-ds['time'].values[0]).days
-                                                            else:   
-                                                                if isinstance((ds['time'].values[1]-ds['time'].values[0]),np.timedelta64):
-                                                                    time_step = np.timedelta64(ds['time'].values[1]-ds['time'].values[0], 'D')/ np.timedelta64(1, 'D')
-                                                                else:    
-                                                                    time_step = ds['time'].values[1]-ds['time'].values[10]
+                                                            #check Monotonicity of the time serie
+                                                            if strictly_increasing(ds.coords['time']):
+                                                                # test Time step : should be 360<timestep<367
+                                                                if isinstance((ds['time'].values[1]-ds['time'].values[0]),datetime.timedelta):
+                                                                    time_step = (ds['time'].values[1]-ds['time'].values[0]).days
+                                                                else:   
+                                                                    if isinstance((ds['time'].values[1]-ds['time'].values[0]),np.timedelta64):
+                                                                        time_step = np.timedelta64(ds['time'].values[1]-ds['time'].values[0], 'D')/ np.timedelta64(1, 'D')
+                                                                    else:    
+                                                                        time_step = ds['time'].values[1]-ds['time'].values[10]
 
-                                                            if 360<=time_step<=367:
-                                                                f.write(' - Time step: ' + str(time_step) + ' days' + '\n')
-                                                            else:
-                                                                f.write(' - ERROR: the time step(' + str(time_step) + ') should be comprised between [360,367].\n')
+                                                                if 360<=time_step<=367:
+                                                                    f.write(' - Time step: ' + str(time_step) + ' days' + '\n')
+                                                                else:
+                                                                    f.write(' - ERROR: the time step(' + str(time_step) + ') should be comprised between [360,367].\n')
+                                                                    var_time_errors += 1
+
+                                                                # test duration  (iteration = length of the coords 'time')
+                                                                duration_days = pd.to_timedelta(time_step * iteration,'D')
+                                                                duration_years = round(pd.to_numeric(duration_days.days / avgyear))
+                                                                if  duration_years == experiments[index_exp]['duration']:
+                                                                    f.write(" - Experiment lasts " + str(duration_years) + ' years.\n')
+                                                                    # test Starting date
+                                                                    if experiments[index_exp]['startinf'] <= start_exp <= experiments[index_exp]['startsup']:
+                                                                        f.write(' - Experiment starts correctly on ' + start_exp.strftime('%Y-%m-%d') + '.\n')
+                                                                    else:
+                                                                        f.write(' - ERROR: the experiment starts the ' + start_exp.strftime('%Y-%m-%d') + '. The date should be comprised between ' + experiments[index_exp]['startinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['startsup'].strftime('%Y-%m-%d')+'\n')
+                                                                        var_time_errors += 1
+                                                                    # test Ending date
+                                                                    if experiments[index_exp]['endinf'] <= end_exp <= experiments[index_exp]['endsup']:
+                                                                        f.write(' - Experiment ends correctly on ' + end_exp.strftime('%Y-%m-%d') + '.\n')
+                                                                    else:
+                                                                        f.write(' - ERROR: the experiment ends on ' + end_exp.strftime('%Y-%m-%d') + '. The date should be comprised between ' + experiments[index_exp]['endinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['endsup'].strftime('%Y-%m-%d')+'\n')
+                                                                        var_time_errors += 1
+                                                                else:
+                                                                    end_date = start_exp  + datetime.timedelta(days = experiments[index_exp]['duration']*avgyear)
+                                                                    f.write(' - ERROR: the experiment lasts ' + str(duration_years) + ' years. The duration should be ' + str(experiments[index_exp]['duration']) + ' years\n')
+                                                                    f.write(' - As the experiment started on ' + start_exp.strftime('%Y-%m-%d') + ' , it should end on '+ end_date.strftime('%Y-%m-%d')+'\n')                                                                 
+                                                                    var_time_errors += 1
+
+
+                                                            else: #time serie not monotonous
+                                                                f.write(' - ERROR: the time serie is not monotonous. Time segments have probably been concatenate in a wrong order.\n')
                                                                 var_time_errors += 1
+                                                            
                                                         else: 
                                                             #not a datetime format
                                                             f.write(' - ERROR: the time format of the Netcdf file is not recognized.Time Tests have been ignored.\n')
@@ -449,7 +470,7 @@ try:
             else:
                 f.write('\n ')
                 f.write('**********************************************************\n')
-                f.write('**  Experiment: ' + experiment_name + ' \n ')
+                f.write(' **  Experiment: ' + experiment_name + ' \n ')
                 f.write('**********************************************************\n')
                 f.write('\n ')
                 f.write('ERROR: The compliance check is ignored for experiment ' + experiment_name + ' as it is not in [hist, ctrl, ctrl_proj, exp01, exp02, exp03, exp04, exp05, exp06, exp07, exp08, exp09, exp10, exp11, exp12, exp13]. \n')

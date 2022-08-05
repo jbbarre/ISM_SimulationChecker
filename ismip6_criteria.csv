@@ -13,9 +13,9 @@ litempbotgr;x-y-t;ST;Basal temperature beneath grounded ice sheet;temperature_at
 litemptop;x-y-t;ST;Surface temperature;temperature_at_top_of_ice_sheet_model;temperature_at_ground_level_in_snow_or_firn;K;0;183;274;183;274
 lithk;x-y-t;ST;Ice thickness;land_ice_thickness;;m;1;0;5000;0;5000
 orog;x-y-t;ST;Surface elevation;surface_altitude;;m;1;0;4500;0;4500
-sftflf;x-y-t;ST;Floating ice sheet area fraction;floating_ice_shelf_area_fraction;floating_ice_sheet_area_fraction;unitless;1;0;1;0;1
-sftgif;x-y-t;ST;Land ice area fraction;land_ice_area_fraction;;unitless;1;0;1;0;1
-sftgrf;x-y-t;ST;Grounded ice sheet area fraction;grounded_ice_sheet_area_fraction;;unitless;1;0;1;0;1
+sftflf;x-y-t;ST;Floating ice sheet area fraction;floating_ice_shelf_area_fraction;floating_ice_sheet_area_fraction;1;1;0;1;0;1
+sftgif;x-y-t;ST;Land ice area fraction;land_ice_area_fraction;;1;1;0;1;0;1
+sftgrf;x-y-t;ST;Grounded ice sheet area fraction;grounded_ice_sheet_area_fraction;;1;1;0;1;0;1
 strbasemag;x-y-t;ST;Basal drag;land_ice_basal_drag;magnitude_of_land_ice_basal_drag;Pa;1;0;200000;0;200000
 topg;x-y-t;ST;Bedrock elevation;bedrock_altitude;;m;1;-7000;4000;-3000;4000
 xvelbase;x-y-t;ST;Basal velocity in x;land_ice_basal_x_velocity;;m s-1;0;-0,000400;0,000400;-0,000800;0,000800

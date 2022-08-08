@@ -480,7 +480,7 @@ try:
         
             print(experiment_name,': compliance check processed.')
             if exp_errors >0:
-                print('Found' , exp_errors , 'errors. Check compliance_checker_log.txt for details.')
+                print('Found' , exp_errors , 'errors. Check '+source_path+'compliance_checker_log.txt for details.')
             else:
                 print('Successfully verified with no errors')
             print( )
@@ -498,7 +498,7 @@ try:
         print('-------------------------------------------------------------------------')
         print(source_path,': compliance check processed.')
         if total_errors >0:
-            print('Found a total of' , total_errors , 'errors. Check compliance_checker_log.txt for details.')
+            print('Found a total of' , total_errors , 'errors. Check '+source_path+'compliance_checker_log.txt for details.')
         else:
             print('Successfully verified with no errors')
         print('-------------------------------------------------------------------------')

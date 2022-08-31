@@ -38,6 +38,23 @@ else:
     mandatory_variables = ismip_mandatory_var
 
 # experiments setup 
+experiments_ismip6_ext =[{'experiment':'ctrlAE', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,7,1),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE01', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE02', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE03', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE04', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE05', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE06', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE07', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE08', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE09', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE10', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE11', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE12', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE13', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286},
+                  {'experiment':'expAE14', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':286}
+]
+
 experiments_ismip6 =[{'experiment':'hist', 'startinf':datetime.datetime(1979, 6, 30),'startsup':datetime.datetime(1980, 1, 1),'endinf':datetime.datetime(2014, 6, 30),'endsup':datetime.datetime(2015, 1, 1),'duration':35},
                   {'experiment':'ctrl', 'startinf':datetime.datetime(1979, 6, 30),'startsup':datetime.datetime(1980, 1, 1),'endinf':datetime.datetime(2100,6,30),'endsup':datetime.datetime(2101, 1, 1),'duration':120},
                   {'experiment':'ctrl_proj', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2100,7,1),'endsup':datetime.datetime(2101, 1, 1),'duration':86},
@@ -59,6 +76,7 @@ experiments_ismip6 =[{'experiment':'hist', 'startinf':datetime.datetime(1979, 6,
 scalar_variables_ismip6 = ['lim','limnsw','iareagr','iareafl','tendacabf','tendlibmassbf','tendlibmassbffl','tendlicalvf','tendlifmassbf','tendligroundf']
 scalar_variables = scalar_variables_ismip6
 experiments = experiments_ismip6
+#experiments = experiments_ismip6_ext
 
 # obtain the directory tree : return directories (=experiments) and files (=variables)
 def files_and_subdirectories(path):
@@ -364,11 +382,12 @@ try:
                                                                 # test Time step : should be 360<timestep<367
                                                                 if isinstance((ds['time'].values[1]-ds['time'].values[0]),datetime.timedelta):
                                                                     time_step = (ds['time'].values[1]-ds['time'].values[0]).days
+
                                                                 else:   
                                                                     if isinstance((ds['time'].values[1]-ds['time'].values[0]),np.timedelta64):
                                                                         time_step = np.timedelta64(ds['time'].values[1]-ds['time'].values[0], 'D')/ np.timedelta64(1, 'D')
                                                                     else:    
-                                                                        time_step = ds['time'].values[1]-ds['time'].values[10]
+                                                                        time_step = ds['time'].values[1]-ds['time'].values[0]
 
                                                                 if 360<=time_step<=367:
                                                                     f.write(' - Time step: ' + str(time_step) + ' days' + '\n')

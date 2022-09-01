@@ -15,7 +15,7 @@ version = '0.1' #05.08.2022 (Major version).(Minor version)
 #######################################
 #### specify your source path
 #######################################
-source_path = './ismip6/'
+source_path = './test'
 
 #######################################
 # Compliance values to be monitored
@@ -291,7 +291,7 @@ try:
                                                     if ds[ivar].attrs['units'] == ismip_meta[var_index[0]]['units']:
                                                         f.write(' - The unit is correct: ' + ds[ivar].attrs['units']+'\n')
                                                     else:
-                                                        f.write(' - ERROR '+ivar+' : The unit of the variable is ' + ds[ivar].attrs['units'] + ' and should be ' + ismip_meta[var_index[0]]['units']+' \n')
+                                                        f.write(' - ERROR: The unit of the variable is ' + ds[ivar].attrs['units'] + ' and should be ' + ismip_meta[var_index[0]]['units']+' \n')
                                                         var_num_errors += 1 
 
                                                     # check if the array  is full of NAN values
@@ -300,16 +300,16 @@ try:
                                                         if ds[ivar].min(skipna=True).item()>=ismip_meta[var_index[0]]['min_value_'+region.lower()]:
                                                            f.write(' - The minimum value successfully verified.\n')
                                                         else:
-                                                            f.write(' - ERROR '+ivar+' : The minimum value (' + str(ds[ivar].min(skipna=True).values.item(0)) + ') is out of range. Min value accepted: ' + str(ismip_meta[var_index[0]]['min_value_'+region.lower()])+'\n')
+                                                            f.write(' - ERROR: The minimum value (' + str(ds[ivar].min(skipna=True).values.item(0)) + ') is out of range. Min value accepted: ' + str(ismip_meta[var_index[0]]['min_value_'+region.lower()])+'\n')
                                                             var_num_errors += 1 
                                                         # check the max value
                                                         if ds[ivar].max(skipna=True).item()<=ismip_meta[var_index[0]]['max_value_'+region.lower()]:
                                                                 f.write(' - The maximum value successfully verified.\n')
                                                         else:
-                                                            f.write(' - ERROR '+ivar+' : The maximum value (' + str(ds[ivar].max(skipna=True).values.item(0)) + ') is out of range. Max value accepted: ' + str(ismip_meta[var_index[0]]['max_value_'+region.lower()])+'\n')
+                                                            f.write(' - ERROR: The maximum value (' + str(ds[ivar].max(skipna=True).values.item(0)) + ') is out of range. Max value accepted: ' + str(ismip_meta[var_index[0]]['max_value_'+region.lower()])+'\n')
                                                             var_num_errors += 1
                                                     else:
-                                                        f.write(' - ERROR '+ivar+' : The array only contains Nan values.\n')
+                                                        f.write(' - ERROR: The array only contains Nan values.\n')
                                                         var_num_errors += 1
 
 
@@ -480,7 +480,7 @@ try:
         
             print(experiment_name,': compliance check processed.')
             if exp_errors >0:
-                print('Found' , exp_errors , 'errors. Check '+source_path+'compliance_checker_log.txt for details.')
+                print('Found' , exp_errors , 'errors. Check compliance_checker_log.txt for details.')
             else:
                 print('Successfully verified with no errors')
             print( )
@@ -498,7 +498,7 @@ try:
         print('-------------------------------------------------------------------------')
         print(source_path,': compliance check processed.')
         if total_errors >0:
-            print('Found a total of' , total_errors , 'errors. Check '+source_path+'compliance_checker_log.txt for details.')
+            print('Found a total of' , total_errors , 'errors. Check compliance_checker_log.txt for details.')
         else:
             print('Successfully verified with no errors')
         print('-------------------------------------------------------------------------')

@@ -1,6 +1,6 @@
 variable;dim;type;variable_name;standard_name;alias_name;units;mandatory;min_value_ais;max_value_ais;min_value_gis;max_value_gis
 acabf;x-y-t;FL;Surface mass balance flux;land_ice_surface_specific_mass_balance_flux;;kg m-2 s-1;1;-0,0001;0,0010;-0,0001;0,0010
-base;x-y-t;ST;Base elevation;base_altitude;;m;1;-3000;4000;-3000;4000
+base;x-y-t;ST;Base elevation;base_altitude;;m;1;-3800;4000;-3800;4000
 dlithkdt;x-y-t;FL;Ice thickness imbalance;tendency_of_land_ice_thickness;;m s-1;0;-0,0001000000;0,000100000;-0,0001000000;0,000100000
 hfgeoubed;x-y-t;FL;Geothermal heat flux;upward_geothermal_heat_flux_in_land_ice;upward_geothermal_heat_flux_at_ground_level;W m-2;0;0,0;0,3;0,0;0,3
 libmassbffl;x-y-t;FL;Basal mass balance flux beneath floating ice;land_ice_basal_specific_mass_balance_flux;;kg m-2 s-1;1;-0,0040;0,0010;-0,0040;0,0010

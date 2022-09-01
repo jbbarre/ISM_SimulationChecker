@@ -56,10 +56,28 @@ experiments_ismip6 =[{'experiment':'hist', 'startinf':datetime.datetime(1979, 6,
                   {'experiment':'exp13', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2100,6,30),'endsup':datetime.datetime(2101, 1, 1),'duration':86}
 ]
 
+# experiments setup for ISMIP6_2300
+experiments_ismip6_2300 =[{'experiment':'hist', 'startinf':datetime.datetime(1979, 6, 30),'startsup':datetime.datetime(1980, 1, 1),'endinf':datetime.datetime(2014, 6, 30),'endsup':datetime.datetime(2015, 1, 1),'duration':35},
+                  {'experiment':'ctrl', 'startinf':datetime.datetime(1979, 6, 30),'startsup':datetime.datetime(1980, 1, 1),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':120},
+                  {'experiment':'ctrl_proj', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,7,1),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp01', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp02', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp03', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp04', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp05', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp06', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp07', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp08', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp09', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp10', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp11', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp12', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86},
+                  {'experiment':'exp13', 'startinf':datetime.datetime(2015, 1, 1),'startsup':datetime.datetime(2016, 1, 2),'endinf':datetime.datetime(2300,6,30),'endsup':datetime.datetime(2301, 1, 1),'duration':86}
+]
 
 scalar_variables_ismip6 = ['lim','limnsw','iareagr','iareafl','tendacabf','tendlibmassbf','tendlibmassbffl','tendlicalvf','tendlifmassbf','tendligroundf']
 scalar_variables = scalar_variables_ismip6
-experiments = experiments_ismip6
+experiments = experiments_ismip6_2300
 
 # obtain the directory tree : return directories (=experiments) and files (=variables)
 def files_and_subdirectories(path):

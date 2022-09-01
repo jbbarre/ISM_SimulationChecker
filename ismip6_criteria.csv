@@ -4,10 +4,10 @@ base;x-y-t;ST;Base elevation;base_altitude;;m;1;-3000;4000;-3000;4000
 dlithkdt;x-y-t;FL;Ice thickness imbalance;tendency_of_land_ice_thickness;;m s-1;0;-0,0001000000;0,000100000;-0,0001000000;0,000100000
 hfgeoubed;x-y-t;FL;Geothermal heat flux;upward_geothermal_heat_flux_in_land_ice;upward_geothermal_heat_flux_at_ground_level;W m-2;0;0,0;0,3;0,0;0,3
 libmassbffl;x-y-t;FL;Basal mass balance flux beneath floating ice;land_ice_basal_specific_mass_balance_flux;;kg m-2 s-1;1;-0,0040;0,0010;-0,0040;0,0010
-libmassbfgr;x-y-t;FL;Basal mass balance flux beneath grounded ice;land_ice_basal_specific_mass_balance_flux;;kg m-2 s-1;0;-0,0003;0,00001;-0,0003;0,00001
-licalvf;x-y-t;FL;Calving flux;land_ice_specific_mass_flux_due_to_calving;;kg m-2 s-1;0;-100000000000;0;-100000000000;0
-lifmassbf;x-y-t;FL;Ice front melt and calving flux;land_ice_specific_mass_flux_due_to_calving_and_ice_front_melting;;kg m-2 s-1;0;-100000000000;0;-100000000000;0
-ligroundf;x-y-t;FL;Grounding line flux;land_ice_specific_mass_flux_at_grounding_line;;kg m-2 s-1;0;-100000000000;0;-100000000000;0
+libmassbfgr;x-y-t;FL;Basal mass balance flux beneath grounded ice;land_ice_basal_specific_mass_balance_flux;;kg m-2 s-1;1;-0,0003;0,0000;-0,0003;0,0000
+licalvf;x-y-t;FL;Calving flux;land_ice_specific_mass_flux_due_to_calving;;kg m-2 s-1;0;0;100000000000;0;100000000000
+lifmassbf;x-y-t;FL;Ice front melt and calving flux;land_ice_specific_mass_flux_due_to_calving_and_ice_front_melting;;kg m-2 s-1;0;0;100000000000;0;100000000000
+ligroundf;x-y-t;FL;Grounding line flux;land_ice_specific_mass_flux_at_grounding_line;;kg m-2 s-1;0;0;100000000000;0;100000000000
 litempbotfl;x-y-t;ST;Basal temperature beneath floating ice shelf;temperature_at_base_of_ice_sheet_model;land_ice_basal_temperature;K;0;183;274;183;274
 litempbotgr;x-y-t;ST;Basal temperature beneath grounded ice sheet;temperature_at_base_of_ice_sheet_model;land_ice_basal_temperature;K;0;183;274;183;274
 litemptop;x-y-t;ST;Surface temperature;temperature_at_top_of_ice_sheet_model;temperature_at_ground_level_in_snow_or_firn;K;0;183;274;183;274
@@ -16,7 +16,7 @@ orog;x-y-t;ST;Surface elevation;surface_altitude;;m;1;0;4500;0;4500
 sftflf;x-y-t;ST;Floating ice sheet area fraction;floating_ice_shelf_area_fraction;floating_ice_sheet_area_fraction;1;1;0;1;0;1
 sftgif;x-y-t;ST;Land ice area fraction;land_ice_area_fraction;;1;1;0;1;0;1
 sftgrf;x-y-t;ST;Grounded ice sheet area fraction;grounded_ice_sheet_area_fraction;;1;1;0;1;0;1
-strbasemag;x-y-t;ST;Basal drag;land_ice_basal_drag;magnitude_of_land_ice_basal_drag;Pa;1;-1;2000000;-1;2000000
+strbasemag;x-y-t;ST;Basal drag;land_ice_basal_drag;magnitude_of_land_ice_basal_drag;Pa;1;0;200000;0;200000
 topg;x-y-t;ST;Bedrock elevation;bedrock_altitude;;m;1;-7000;4000;-3000;4000
 xvelbase;x-y-t;ST;Basal velocity in x;land_ice_basal_x_velocity;;m s-1;0;-0,000400;0,000400;-0,000800;0,000800
 xvelmean;x-y-t;ST;Mean velocity in x;land_ice_vertical_mean_x_velocity;;m s-1;1;-0,000400;0,000400;-0,000800;0,000800

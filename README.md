@@ -33,9 +33,10 @@ The code has been developed with python 3.9 and the following modules:
 
 ### Test the code
 
-1. Conda users: activate the isschecker environnement: `> conda activate isschecker`. For others, be sure that the dependencies specified in the YML file [isschecker_env.yml](https://github.com/jbbarre/ISM_SimulationChecker/blob/main/isschecker_env.yml) are installed. 
+1. Conda users: activate the isschecker environnement: `> conda activate isschecker`. 
+   For others, be sure that the dependencies specified in the YML file [isschecker_env.yml]  (https://github.com/jbbarre/ISM_SimulationChecker/blob/main/isschecker_env.yml) are installed. 
    
-2. in a terminal, run the script: `> python compliance_checker.py`. A progression bar appears in the terminal and shows the progression.
+2. In a terminal, run the script: `> python compliance_checker.py`. A progression bar appears in the terminal and shows the progression.
    
 3. Without any changes, the script checks the `test` directory, which contains a single file. After processing the check, open the *compliance_checker_log.txt* file created in the `test` directory. The compliance checker raises errors because the test data is just a short extraction of a complete dataset.
    

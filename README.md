@@ -44,7 +44,7 @@ The code has been developed with python 3.9 and the following modules:
 
 ### How to launch a compliance check ?
 
-1. In *compliance_checker.py*, specify the path of the directory to check by changing the value of the variable **source_path** and change the experiments tested from**experiments = experiments_ismip6** to **experiments = experiments_ismip6_ext** to test the new 2300 extensions. The compliance criteria csv file (*ismip6_criteria.csv*) must be located in the same directory as *compliance_checker.py* .
+1. In *compliance_checker.py*, specify the path of the directory to check by changing the value of the variable **source_path** and change the experiments tested from **experiments = experiments_ismip6** to **experiments = experiments_ismip6_ext** to test the new 2300 extensions. The compliance criteria csv file (*ismip6_criteria.csv*) must be located in the same directory as *compliance_checker.py* .
 
 2. In a terminal, run the script:
 `> python compliance_checker.py`.

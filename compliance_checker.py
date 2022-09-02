@@ -76,7 +76,7 @@ experiments_ismip6 =[{'experiment':'hist', 'startinf':datetime.datetime(1979, 6,
 
 scalar_variables_ismip6 = ['lim','limnsw','iareagr','iareafl','tendacabf','tendlibmassbf','tendlibmassbffl','tendlicalvf','tendlifmassbf','tendligroundf']
 scalar_variables = scalar_variables_ismip6
-experiments = experiments_ismip6_ext
+experiments = experiments_ismip6
 
 # obtain the directory tree : return directories (=experiments) and files (=variables)
 def files_and_subdirectories(path):

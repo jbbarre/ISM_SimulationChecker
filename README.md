@@ -2,7 +2,7 @@
 
 The script checks the compliance of a simulation dataset according criteria, which are related to:
 
-* naming conventions,
+* naming conventions 
 * admissible numerical values,
 * spatial definition of the grid which differs according to the ice sheet (AIS vs GIS),
 * time recording dependent of the experiments.
@@ -10,6 +10,8 @@ The script checks the compliance of a simulation dataset according criteria, whi
 The compliance criteria of output variables are defined in a separate csv file. The compliance criteria of experiments are directly defined as a dictionnary in the python file.
 
 => For ISMIP6 simulations, the criteria are following the conventions defined in the [ISMIP6 wiki](https://www.climate-cryosphere.org/wiki/index.php?title=ISMIP6-Projections-Antarctica#Appendix_1_.E2.80.93_Output_grid_definition_and_interpolation). The associated csv file is [ismip6_criteria_v0.csv](https://github.com/jbbarre/ISM_SimulationChecker/blob/main/ismip6_criteria_v0.csv)
+
+=> ISMIP6 2300 file name convention: check carrefully the section A2.1 File name convention of the [ISMIP6 2300 wiki](https://www.climate-cryosphere.org/wiki/index.php?title=ISMIP6-Projections2300-Antarctica)
 
 *************************************************
 

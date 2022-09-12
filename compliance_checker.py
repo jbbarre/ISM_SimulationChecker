@@ -7,11 +7,17 @@ import numpy as np
 import cftime
 # progress bar
 from tqdm import tqdm
-import gitinfo
+import subprocess
 
-###  Version :
-commit_num = gitinfo.get_git_info().get('commit')
-
+###  Commit number:
+try:
+    bashCommand = "git log --pretty=format:'%h' -n 1"
+    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+    commit_num, error = process.communicate()
+    commit_num = commit_num.decode("UTF-8")
+except: 
+    print('Commit number associtad with this code. Is there a .git in this directory ?')
+    commit_num = 'No commit number identified.'
 
 #######################################
 #### specify your source path
@@ -113,7 +119,7 @@ try:
         f.write('************************************************************************************\n')
         f.write('*************     Ice Sheet Model Simulations - Compliance Checker     *************\n')
         f.write('************************************************************************************\n')
-        f.write(f'Commit Number: {commit_num[0:10]} \n')
+        f.write(f'Commit Number: {commit_num} \n')
         f.write('verification criteria: ismip6_criteria.csv \n')
         f.write('date: '+ today.strftime("%Y/%m/%d") +'\n')
         f.write('source: https://github.com/jbbarre/ISM_SimulationChecker \n')

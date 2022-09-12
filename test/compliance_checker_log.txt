@@ -1,8 +1,8 @@
 ************************************************************************************
 *************     Ice Sheet Model Simulations - Compliance Checker     *************
 ************************************************************************************
-Commit Number: 4c02f505e8 
-verification criteria: ismip6_criteria_v0.csv 
+Commit Number: 'ac7830f' 
+verification criteria: ismip6_criteria.csv 
 date: 2022/09/12
 source: https://github.com/jbbarre/ISM_SimulationChecker 
  

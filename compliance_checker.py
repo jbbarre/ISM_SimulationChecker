@@ -7,9 +7,12 @@ import numpy as np
 import cftime
 # progress bar
 from tqdm import tqdm
+import gitinfo
 
 ###  Version :
-version = '0.3' #12.09.2022
+commit_num = gitinfo.get_git_info().get('commit')
+
+
 #######################################
 #### specify your source path
 #######################################
@@ -110,8 +113,8 @@ try:
         f.write('************************************************************************************\n')
         f.write('*************     Ice Sheet Model Simulations - Compliance Checker     *************\n')
         f.write('************************************************************************************\n')
-        f.write(f'version: {version} \n')
-        f.write('verification criteria: ismip6_criteria_v0.csv \n')
+        f.write(f'Commit Number: {commit_num[0:10]} \n')
+        f.write('verification criteria: ismip6_criteria.csv \n')
         f.write('date: '+ today.strftime("%Y/%m/%d") +'\n')
         f.write('source: https://github.com/jbbarre/ISM_SimulationChecker \n')
         f.write(' \n')

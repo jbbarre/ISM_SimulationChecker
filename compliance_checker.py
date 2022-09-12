@@ -7,14 +7,29 @@ import numpy as np
 import cftime
 # progress bar
 from tqdm import tqdm
+from inspect import ArgSpec
+import argparse
 
 ###  Version :
-version = '0.1' #05.08.2022 (Major version).(Minor version)
+version = '0.2' #02.09.2022 (Minor version)
+
+### parser setup
+
+def dir_path(path):
+    if os.path.isdir(path):
+        return path
+    else:
+        raise argparse.ArgumentTypeError(f"readable_dir:{path} is not a valid path")
+
+
+parser = argparse.ArgumentParser(description='Compliance checker of Ice Sheet simulations.')
+parser.add_argument('path',metavar ='path',default='./test',type= dir_path, help='Path of the directory to check.')
+args = parser.parse_args()
 
 #######################################
 #### specify your source path
 #######################################
-source_path = './test'
+source_path = args.path
 
 #######################################
 # Compliance values to be monitored

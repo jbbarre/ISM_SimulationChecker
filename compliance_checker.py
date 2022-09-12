@@ -11,7 +11,7 @@ from inspect import ArgSpec
 import argparse
 
 ###  Version :
-version = '0.2' #02.09.2022 (Minor version)
+version = '0.3' #12.09.2022
 
 ### parser setup
 

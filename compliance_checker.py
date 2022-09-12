@@ -9,8 +9,7 @@ import cftime
 from tqdm import tqdm
 
 ###  Version :
-version = '0.1' #05.08.2022 (Major version).(Minor version)
-
+version = '0.3' #12.09.2022
 #######################################
 #### specify your source path
 #######################################

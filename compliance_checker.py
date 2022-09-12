@@ -77,7 +77,7 @@ scalar_variables_ismip6 = ['lim','limnsw','iareagr','iareafl','tendacabf','tendl
 scalar_variables = scalar_variables_ismip6
 
 ####### Set up the correct setup according your Experiment: experiments_ismip6_ext for ISMIP6 extension (2300) OR experiments_ismip6 for ISMIP6 (2100)
-experiments = experiments_ismip6_ext
+experiments = experiments_ismip6
 
 # obtain the directory tree : return directories (=experiments) and files (=variables)
 def files_and_subdirectories(path):

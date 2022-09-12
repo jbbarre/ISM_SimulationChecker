@@ -75,6 +75,7 @@ experiments_ismip6 =[{'experiment':'hist', 'startinf':datetime.datetime(1979, 6,
 
 scalar_variables_ismip6 = ['lim','limnsw','iareagr','iareafl','tendacabf','tendlibmassbf','tendlibmassbffl','tendlicalvf','tendlifmassbf','tendligroundf']
 scalar_variables = scalar_variables_ismip6
+
 ####### Set up the correct setup according your Experiment: experiments_ismip6_ext for ISMIP6 extension (2300) OR experiments_ismip6 for ISMIP6 (2100)
 experiments = experiments_ismip6_ext
 
@@ -379,6 +380,7 @@ try:
                                                         index_exp=[dic['experiment'] for dic in experiments].index(experiment_name)
                                                         #test if start_exp and end_exp are datetime format
                                                         if np.issubdtype(start_exp.dtype, np.datetime64) & np.issubdtype(start_exp.dtype, np.datetime64):
+
                                                             #check Monotonicity of the time serie
                                                             if strictly_increasing(ds.coords['time']):
                                                                 # test Time step : should be 360<timestep<367
@@ -511,10 +513,7 @@ try:
             total_num_errors += exp_num_errors
             total_spatial_errors += exp_spatial_errors
             total_time_errors += exp_time_errors
-            total_file_errors += exp_file_errors
-
-            print(total_file_errors)
-            
+            total_file_errors += exp_file_errors          
 
         total_errors = total_naming_errors + total_num_errors + total_spatial_errors + total_time_errors + total_file_errors
         #feedback terminal

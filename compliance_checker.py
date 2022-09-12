@@ -1,4 +1,3 @@
-
 import os
 import xarray as xr
 import pandas as pd
@@ -76,6 +75,7 @@ experiments_ismip6 =[{'experiment':'hist', 'startinf':datetime.datetime(1979, 6,
 
 scalar_variables_ismip6 = ['lim','limnsw','iareagr','iareafl','tendacabf','tendlibmassbf','tendlibmassbffl','tendlicalvf','tendlifmassbf','tendligroundf']
 scalar_variables = scalar_variables_ismip6
+####### Set up the correct setup according your Experiment: experiments_ismip6_ext for ISMIP6 extension (2300) OR experiments_ismip6 for ISMIP6 (2100)
 experiments = experiments_ismip6_ext
 
 # obtain the directory tree : return directories (=experiments) and files (=variables)
@@ -370,13 +370,15 @@ try:
                                                     #check if time dimension is not missing
                                                     if set(['t']).issubset(dim) or set(['time']).issubset(dim):
                                                         iteration = len(ds.coords['time'])
-                                                        start_exp = pd.to_datetime(min(ds['time']).values.astype("datetime64[ns]"))
-                                                        end_exp  = pd.to_datetime(max(ds['time']).values.astype("datetime64[ns]"))
+                                                        start_exp = min(ds['time']).values.astype("datetime64[D]")
+                                                        end_exp  = max(ds['time']).values.astype("datetime64[D]")
                                                         avgyear = 365.2425        # pedants definition of a year length with leap years
-                                                        
+                                                        duration_days = (end_exp - start_exp)
+                                                        duration_years =  duration_days.astype('timedelta64[Y]')/np.timedelta64(1,'Y')
+                                                    
                                                         index_exp=[dic['experiment'] for dic in experiments].index(experiment_name)
                                                         #test if start_exp and end_exp are datetime format
-                                                        if isinstance(start_exp, datetime.datetime) & isinstance(end_exp, datetime.datetime):
+                                                        if np.issubdtype(start_exp.dtype, np.datetime64) & np.issubdtype(start_exp.dtype, np.datetime64):
                                                             #check Monotonicity of the time serie
                                                             if strictly_increasing(ds.coords['time']):
                                                                 # test Time step : should be 360<timestep<367
@@ -400,23 +402,24 @@ try:
                                                                 if  duration_years == experiments[index_exp]['duration']:
                                                                     f.write(" - Experiment lasts " + str(duration_years) + ' years.\n')
                                                                     # test Starting date
-                                                                    if experiments[index_exp]['startinf'] <= start_exp <= experiments[index_exp]['startsup']:
-                                                                        f.write(' - Experiment starts correctly on ' + start_exp.strftime('%Y-%m-%d') + '.\n')
+                                                                    dateformat_start_exp = datetime.datetime(start_exp.item().year, start_exp.item().month, start_exp.item().day)
+                                                                    if experiments[index_exp]['startinf'] <=  dateformat_start_exp <= experiments[index_exp]['startsup']:
+                                                                        f.write(' - Experiment starts correctly on ' + start_exp.item().strftime('%Y-%m-%d') + '.\n')
                                                                     else:
-                                                                        f.write(' - ERROR: the experiment starts the ' + start_exp.strftime('%Y-%m-%d') + '. The date should be comprised between ' + experiments[index_exp]['startinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['startsup'].strftime('%Y-%m-%d')+'\n')
+                                                                        f.write(' - ERROR: the experiment starts the ' + start_exp.item().strftime('%Y-%m-%d') + '. The date should be comprised between ' + experiments[index_exp]['startinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['startsup'].strftime('%Y-%m-%d')+'\n')
                                                                         var_time_errors += 1
                                                                     # test Ending date
-                                                                    if experiments[index_exp]['endinf'] <= end_exp <= experiments[index_exp]['endsup']:
-                                                                        f.write(' - Experiment ends correctly on ' + end_exp.strftime('%Y-%m-%d') + '.\n')
+                                                                    dateformat_end_exp = datetime.datetime(end_exp.item().year, end_exp.item().month, end_exp.item().day)
+                                                                    if experiments[index_exp]['endinf'] <= dateformat_end_exp <= experiments[index_exp]['endsup']:
+                                                                        f.write(' - Experiment ends correctly on ' + end_exp.item().strftime('%Y-%m-%d') + '.\n')
                                                                     else:
-                                                                        f.write(' - ERROR: the experiment ends on ' + end_exp.strftime('%Y-%m-%d') + '. The date should be comprised between ' + experiments[index_exp]['endinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['endsup'].strftime('%Y-%m-%d')+'\n')
+                                                                        f.write(' - ERROR: the experiment ends on ' + end_exp.item() + '. The date should be comprised between ' + experiments[index_exp]['endinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['endsup'].strftime('%Y-%m-%d')+'\n')
                                                                         var_time_errors += 1
                                                                 else:
                                                                     end_date = start_exp  + datetime.timedelta(days = experiments[index_exp]['duration']*avgyear)
                                                                     f.write(' - ERROR: the experiment lasts ' + str(duration_years) + ' years. The duration should be ' + str(experiments[index_exp]['duration']) + ' years\n')
-                                                                    f.write(' - As the experiment started on ' + start_exp.strftime('%Y-%m-%d') + ' , it should end on '+ end_date.strftime('%Y-%m-%d')+'\n')                                                                 
+                                                                    f.write(' - As the experiment started on ' + start_exp.item().strftime('%Y-%m-%d') + ' , it should end on '+ end_date.item().strftime('%Y-%m-%d')+'\n')                                                                 
                                                                     var_time_errors += 1
-
 
                                                             else: #time serie not monotonous
                                                                 f.write(' - ERROR: the time serie is not monotonous. Time segments have probably been concatenate in a wrong order.\n')
@@ -509,6 +512,8 @@ try:
             total_spatial_errors += exp_spatial_errors
             total_time_errors += exp_time_errors
             total_file_errors += exp_file_errors
+
+            print(total_file_errors)
             
 
         total_errors = total_naming_errors + total_num_errors + total_spatial_errors + total_time_errors + total_file_errors

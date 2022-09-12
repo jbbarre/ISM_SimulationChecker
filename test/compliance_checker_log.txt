@@ -1,9 +1,9 @@
 ************************************************************************************
 *************     Ice Sheet Model Simulations - Compliance Checker     *************
 ************************************************************************************
-version: 0 
+version: 0.1 
 verification criteria: ismip6_criteria_v0.csv 
-date: 2022/08/05
+date: 2022/09/12
 source: https://github.com/jbbarre/ISM_SimulationChecker 
  
 ------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ Tips: Use Cltr+F to look for specific problems.
  
 
  **********************************************************
-** Experiment: exp05 
+ ** Experiment: exp05 
  **********************************************************
 
  ERROR: In experiment exp05_32, these mandatory variable(s) is (are) missing: ['acabf', 'base', 'libmassbfgr', 'lithk', 'orog', 'sftflf', 'sftgif', 'sftgrf', 'strbasemag', 'topg', 'xvelmean', 'yvelmean']
@@ -47,10 +47,10 @@ SPATIAL Tests
  - Grid: Upper right corner is well defined.
  - The grid resolution (32.0) was successfully verified.
 TIME Tests 
+ - Time step: 366.0 days
+ - Experiment lasts 86 years.
  - Experiment starts correctly on 2015-07-01.
  - Experiment ends correctly on 2100-07-01.
- - Experiment lasts 85 years.
- - Time step: 366.0 days
 
 ----------------------------------------------------------
 exp05 - libmassbffl - File:libmassbffl_AIS_IMAU_IMAUICE1_exp05.nc

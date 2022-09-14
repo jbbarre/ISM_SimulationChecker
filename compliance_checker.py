@@ -504,7 +504,7 @@ try:
                 f.write(' **  Experiment: ' + experiment_name + ' \n ')
                 f.write('**********************************************************\n')
                 f.write('\n ')
-                f.write('ERROR: The compliance check is ignored for experiment ' + experiment_name + ' as it is not in [hist, ctrl, ctrl_proj, exp01, exp02, exp03, exp04, exp05, exp06, exp07, exp08, exp09, exp10, exp11, exp12, exp13]. \n')
+                f.write('ERROR: The compliance check is ignored for experiment ' + experiment_name + ' as it is not in ' + [exp['experiment'] for exp in experiments] +'. \n')
                 exp_naming_errors +=1
                 exp_errors = exp_time_errors + exp_spatial_errors + exp_num_errors + exp_naming_errors + exp_file_errors
                 report_naming_issues.append('Compliance check ignored : experiment ' + experiment_name + ' not in the experiments list.')

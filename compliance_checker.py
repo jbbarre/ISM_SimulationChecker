@@ -93,7 +93,7 @@ def files_and_subdirectories(path):
     directories = []
     for f in os.listdir(path):
         if os.path.isfile(os.path.join(path, f)):
-             files.append(f)
+            files.append(f)
         elif os.path.isdir(os.path.join(path, f)):
             directories.append(f)
     return directories, files
@@ -202,10 +202,15 @@ try:
                     temp_mandatory_var.remove(variable)
             #split the experiment directory name
             experiment_chain = xp.split('_')
-            #get the experiment name (example: exp05)
-            experiment_name = '_'.join(experiment_chain[:-1])
-            #get the resolution as integer
-            grid_resolution = int(experiment_chain[-1])
+            if len(experiment_chain) == 2 :
+                #get the experiment name (example: exp05)
+                experiment_name = '_'.join(experiment_chain[:-1])
+                #get the resolution as integer
+                grid_resolution = int(experiment_chain[-1])
+            else:
+                experiment_name = xp
+                grid_resolution = 0
+                print('Error in the naming of the experiment ',xp,'. Should be similar to expXXX_RES')
             
             if experiment_name  in [dic['experiment'] for dic in experiments]:
                 f.write('\n ')
@@ -325,7 +330,7 @@ try:
                                                     if False in ds[ivar].isnull():
                                                         # check the min value
                                                         if ds[ivar].min(skipna=True).item()>=ismip_meta[var_index[0]]['min_value_'+region.lower()]:
-                                                           f.write(' - The minimum value successfully verified.\n')
+                                                            f.write(' - The minimum value successfully verified.\n')
                                                         else:
                                                             f.write(' - ERROR: The minimum value (' + str(ds[ivar].min(skipna=True).values.item(0)) + ') is out of range. Min value accepted: ' + str(ismip_meta[var_index[0]]['min_value_'+region.lower()])+'\n')
                                                             var_num_errors += 1 
@@ -381,7 +386,7 @@ try:
                                                         iteration = len(ds.coords['time'])
                                                         start_exp = min(ds['time']).values.astype("datetime64[D]")
                                                         end_exp  = max(ds['time']).values.astype("datetime64[D]")
-                                                        avgyear = 365.2425        # pedants definition of a year length with leap years
+                                                        avgyear = 365        # pedants definition of a year length with leap years
                                                         duration_days = (end_exp - start_exp)
                                                         duration_years =  duration_days.astype('timedelta64[Y]')/np.timedelta64(1,'Y')
                                                     
@@ -423,10 +428,10 @@ try:
                                                                     if experiments[index_exp]['endinf'] <= dateformat_end_exp <= experiments[index_exp]['endsup']:
                                                                         f.write(' - Experiment ends correctly on ' + end_exp.item().strftime('%Y-%m-%d') + '.\n')
                                                                     else:
-                                                                        f.write(' - ERROR: the experiment ends on ' + end_exp.item() + '. The date should be comprised between ' + experiments[index_exp]['endinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['endsup'].strftime('%Y-%m-%d')+'\n')
+                                                                        f.write(' - ERROR: the experiment ends on ' + end_exp.item().strftime('%Y-%m-%d') + '. The date should be comprised between ' + experiments[index_exp]['endinf'].strftime('%Y-%m-%d') + ' and ' + experiments[index_exp]['endsup'].strftime('%Y-%m-%d')+'\n')
                                                                         var_time_errors += 1
                                                                 else:
-                                                                    end_date = start_exp  + datetime.timedelta(days = experiments[index_exp]['duration']*avgyear)
+                                                                    end_date = start_exp  + np.timedelta64(experiments[2]['duration']*365,'D')
                                                                     f.write(' - ERROR: the experiment lasts ' + str(duration_years) + ' years. The duration should be ' + str(experiments[index_exp]['duration']) + ' years\n')
                                                                     f.write(' - As the experiment started on ' + start_exp.item().strftime('%Y-%m-%d') + ' , it should end on '+ end_date.item().strftime('%Y-%m-%d')+'\n')                                                                 
                                                                     var_time_errors += 1
@@ -570,6 +575,6 @@ try:
     with open(os.path.join(source_path,'compliance_checker_log.txt'), "w") as f:
         f.writelines(contents)
 
-except TypeError:
-    print('Something went wrong with your dataset. Please, check your file(s) carrefully.') 
+except TypeError as err:
+    print('Something went wrong with your dataset. Please, check your file(s) carrefully. Erreur  :', err)
 
